@@ -1,0 +1,8 @@
+# Output files
+*.pdf
+*.png
+
+# Keep brand assets
+!brand.png
+!cover.png
+
