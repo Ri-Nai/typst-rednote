@@ -10,7 +10,7 @@
 // =================正文内容=================
 
 #cover(
-  image-content: image("brand.png"),
+  // image-content: image("assets/brand.png"),
   title: [这是一篇使用#highlight[Typst]写的小红书笔记],
   subtitle: [Typst 小红书模板],
   author: "@reina",

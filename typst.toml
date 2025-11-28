@@ -1,0 +1,15 @@
+[package]
+name = "rednote"
+version = "0.1.0"
+entrypoint = "lib.typ"
+authors = ["Ri-Nai"]
+license = "MIT"
+description = "A Typst template for creating Xiaohongshu (RedNote) style notes."
+repository = "https://github.com/Ri-Nai/typst-rednote"
+keywords = ["rednote", "xiaohongshu", "template", "social-media"]
+categories = ["visualization", "model"]
+
+[template]
+path = "."
+entrypoint = "main.typ"
+thumbnail = "assets/thumbnail-article.png"
