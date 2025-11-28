@@ -25,10 +25,10 @@ Typst RedNote 旨在帮助用户使用 Typst 快速生成美观、符合小红�
 cargo install typship
 
 # 下载到 @local
-typship download <package-repo>
+typship download https://github.com/Ri-Nai/typst-rednote.git
 
 # 或下载到自定义目录
-typship download <package-repo> -n my-packages
+typship download https://github.com/Ri-Nai/typst-rednote.git -n my-packages
 ```
 
 然后在 Typst 文件中导入：
