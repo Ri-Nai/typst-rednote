@@ -4,7 +4,7 @@
 
 #let rednote-theme(
   // 可配置参数
-  font-family: sans-fonts,
+  font-family: serif-fonts,
   bg-color: colors.bg,
   text-color: colors.text,
   highlight-color: colors.highlight,
