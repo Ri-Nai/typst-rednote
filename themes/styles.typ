@@ -7,41 +7,41 @@
 ) = {
   // 一级标题：大号 + 左侧装饰条 + 下划线
   show heading.where(level: 1): it => {
-    v(40pt)
+    v(spacing.h1-gap)
     box[
       #box(
         baseline: 0.3em,
-        width: 12pt,
-        height: 1.2em,
+        width: decorations.h1-bar-width,
+        height: decorations.h1-bar-height,
         fill: accent-color,
-        radius: 4pt,
+        radius: decorations.h1-bar-radius,
       )
-      #h(16pt)
+      #h(spacing.decor-gap)
       #underline(
-        text(size: 60pt, weight: "black", fill: colors.text, it.body),
-        offset: 20pt,
-        stroke: 3pt + accent-color,
+        text(size: font-sizes.title, weight: "black", fill: colors.text, it.body),
+        offset: decorations.h1-underline-offset,
+        stroke: decorations.h1-underline-stroke + accent-color,
       )
     ]
   }
 
   // 二级标题：中号 + 左侧装饰条 + 下划线
   show heading.where(level: 2): it => {
-    v(30pt)
+    v(spacing.h2-gap)
     box[
       #box(
         baseline: 0.2em,
-        width: 6pt,
-        height: 1.1em,
+        width: decorations.h2-bar-width,
+        height: decorations.h2-bar-height,
         fill: accent-color.lighten(20%),
-        radius: 3pt,
+        radius: decorations.h2-bar-radius,
       )
-      #h(12pt)
+      #h(spacing.decor-gap-sm)
       #highlight(
         fill: accent-color.lighten(40%).opacify(-50%),
 
         text(
-          size: 48pt,
+          size: font-sizes.h2,
           weight: "bold",
           fill: colors.text,
           it.body,
@@ -52,21 +52,21 @@
 
   // 三级标题：小号 + 高亮背景
   show heading.where(level: 3): it => {
-    v(20pt)
+    v(spacing.h3-gap)
     box(
       fill: colors.highlight,
-      inset: (x: 16pt, y: 8pt),
-      radius: 8pt,
-      text(size: 42pt, weight: "bold", fill: colors.text, it.body),
+      inset: (x: decorations.h3-inset-x, y: decorations.h3-inset-y),
+      radius: decorations.h3-radius,
+      text(size: font-sizes.h3, weight: "bold", fill: colors.text, it.body),
     )
-    v(16pt)
+    v(spacing.h3-after)
   }
 
   // 四级及以下
   show heading.where(level: 4): it => {
-    v(16pt)
-    text(size: 38pt, weight: "semibold", fill: colors.text.lighten(20%), it.body)
-    v(12pt)
+    v(spacing.h4-gap)
+    text(size: font-sizes.h4, weight: "semibold", fill: colors.text.lighten(20%), it.body)
+    v(spacing.h4-after)
   }
 
   // 代码字体
@@ -75,20 +75,20 @@
   // 行内代码
   show raw.where(block: false): box.with(
     fill: colors.highlight,
-    inset: (x: 8pt, y: 4pt),
-    outset: (y: 4pt),
-    radius: 4pt,
+    inset: (x: decorations.code-inline-inset-x, y: decorations.code-inline-inset-y),
+    outset: (y: decorations.code-inline-outset-y),
+    radius: decorations.code-inline-radius,
   )
 
   // 代码块
   show raw.where(block: true): block.with(
-    fill: rgb("#2d2d2d"),
-    inset: 24pt,
-    radius: 12pt,
+    fill: colors.code-bg,
+    inset: decorations.code-block-inset,
+    radius: decorations.code-block-radius,
     width: 100%,
   )
 
-  show raw.where(block: true): set text(fill: rgb("#f8f8f2"), size: 32pt)
+  show raw.where(block: true): set text(fill: colors.code-text, size: font-sizes.code)
 
   // 链接样式
   show link: underline

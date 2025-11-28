@@ -16,7 +16,7 @@
       height: 40%,
       block(
         clip: true,
-        radius: 24pt,
+        radius: decorations.cover-image-radius,
         image-content,
       ),
     )
@@ -29,30 +29,30 @@
   )[
     #if title != none {
       text(
-        size: 72pt,
-        weight: "black",
+        size: font-sizes.cover-title,
+        weight: "black",  
         fill: colors.text,
         title,
       )
-      v(16pt)
+      v(spacing.cover-title-gap)
     }
 
     #if subtitle != none {
       text(
-        size: 36pt,
+        size: font-sizes.cover-subtitle,
         weight: "medium",
         fill: colors.text.lighten(30%),
         subtitle,
       )
-      v(24pt)
+      v(spacing.cover-subtitle-gap)
     }
 
     #if author != none {
       box(
         fill: accent-color,
-        inset: (x: 24pt, y: 12pt),
-        radius: 50pt,
-        text(fill: white, size: 32pt, weight: "bold", author),
+        inset: (x: decorations.cover-author-inset-x, y: decorations.cover-author-inset-y),
+        radius: decorations.cover-author-radius,
+        text(fill: colors.white, size: font-sizes.cover-author, weight: "bold", author),
       )
     }
   ]
