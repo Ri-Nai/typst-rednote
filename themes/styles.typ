@@ -18,7 +18,12 @@
       )
       #h(spacing.decor-gap)
       #underline(
-        text(size: font-sizes.title, weight: "black", fill: colors.text, it.body),
+        text(
+          size: font-sizes.title,
+          weight: "black",
+          fill: colors.text,
+          it.body,
+        ),
         offset: decorations.h1-underline-offset,
         stroke: decorations.h1-underline-stroke + accent-color,
       )
@@ -39,7 +44,6 @@
       #h(spacing.decor-gap-sm)
       #highlight(
         fill: accent-color.lighten(40%).opacify(-50%),
-
         text(
           size: font-sizes.h2,
           weight: "bold",
@@ -68,7 +72,13 @@
     text(size: font-sizes.h4, weight: "semibold", fill: colors.text.lighten(20%), it.body)
     v(spacing.h4-after)
   }
+  body
+}
 
+// 代码样式函数
+#let raw-style(
+  body,
+) = {
   // 代码字体
   show raw: set text(font: code-fonts)
 
@@ -89,10 +99,6 @@
   )
 
   show raw.where(block: true): set text(fill: colors.code-text, size: font-sizes.code)
-
-  // 链接样式
-  show link: underline
-  show link: set text(fill: accent-color)
 
   body
 }

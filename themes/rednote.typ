@@ -1,5 +1,5 @@
 #import "../core/constants.typ": *
-#import "styles.typ": heading-style
+#import "styles.typ": heading-style, raw-style
 
 #let rednote-theme(
   // 可配置参数
@@ -41,8 +41,15 @@
   // 高亮样式
   show highlight: set highlight(fill: highlight-color)
 
+  // 代码样式
+  show: raw-style
+
   // 标题装饰样式
   show: heading-style.with(accent-color: accent-color)
+
+  // 链接样式
+  show link: underline
+  show link: set text(fill: accent-color)
 
   body
 }
