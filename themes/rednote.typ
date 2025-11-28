@@ -1,5 +1,6 @@
 #import "../core/constants.typ": *
 #import "styles.typ": heading-style, raw-style
+#import "@preview/itemize:0.2.0" as el
 
 #let rednote-theme(
   // 可配置参数
@@ -50,6 +51,9 @@
   // 链接样式
   show link: underline
   show link: set text(fill: accent-color)
+
+  // 修复 enum-list 样式
+  show: el.default-enum-list
 
   body
 }
