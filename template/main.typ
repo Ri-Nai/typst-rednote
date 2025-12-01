@@ -1,8 +1,8 @@
 // 导入模块
-#import "lib.typ": *
+#import "@preview/rewind-note:0.1.0": *
 
 // 使用主题（可传入自定义配置）
-#show: rednote-theme.with(
+#show: rewind-theme.with(
   font-family: serif-fonts, // 可切换字体
   // bg-color: rgb("#fff0f0"),  // 可自定义背景色
 )

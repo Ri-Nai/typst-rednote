@@ -2,7 +2,7 @@
 #import "styles.typ": heading-style, raw-style
 #import "@preview/itemize:0.2.0" as el
 
-#let rednote-theme(
+#let rewind-theme(
   // 可配置参数
   font-family: serif-fonts,
   bg-color: colors.bg,

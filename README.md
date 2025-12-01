@@ -1,96 +1,80 @@
-# Typst RedNote Template
+# Typst Rewind Note Template
 
-这是一个用于创建小红书（RedNote）风格笔记的 Typst 模板。
-
+A Typst template for creating lifestyle social media style notes (similar to Xiaohongshu/RedNote).
 
 <p align="center">
   <img src="assets/thumbnail-cover.png" alt="Preview Cover" width="45%" />
   <img src="assets/thumbnail-article.png" alt="Preview Article" width="45%" />
 </p>
 
-## 简介
+[English](./README.md) | [中文](./README_CN.md)
 
-Typst RedNote 旨在帮助用户使用 Typst 快速生成美观、符合小红书风格的图片或 PDF 文档。它提供了预设的主题、封面生成器以及针对移动端阅读优化的排版样式。
+## Introduction
 
-## 使用方法
+Typst Rewind Note is designed to help users quickly generate beautiful, lifestyle-style images or PDF documents using Typst. It provides preset themes, a cover generator, and layout styles optimized for mobile reading.
 
-### 1. 导入模板
+## Usage
 
-#### 方式一：使用 typship 下载（推荐）
+### 1. Import Template
 
-使用 [typship](https://github.com/sjfhsjfh/typship) 工具将仓库下载到本地：
-
-```bash
-# 安装 typship
-cargo install typship
-
-# 下载到 @local
-typship download https://github.com/Ri-Nai/typst-rednote.git
-
-# 或下载到自定义目录
-typship download https://github.com/Ri-Nai/typst-rednote.git -n my-packages
-```
-
-然后在 Typst 文件中导入：
+#### Method 1: From Typst Universe (After Publication)
 
 ```typst
-#import "@local/rednote:0.1.0": *
-// 或
-#import "@my-packages/rednote:0.1.0": *
+#import "@preview/rewind-note:0.1.0": *
 ```
 
-#### 方式二：手动克隆仓库
+#### Method 2: Local Import
+
+Clone the repository and import:
 
 ```bash
 git clone https://github.com/Ri-Nai/typst-rednote.git
 ```
 
-然后在 Typst 文件中导入：
+Then in your Typst file:
 
 ```typst
 #import "path/to/typst-rednote/lib.typ": *
 ```
 
-> 注意：模板尚未发布到 Typst Universe，目前仅支持本地导入。发布后可使用 `#import "@preview/rednote:0.1.0": *` 从包管理器导入。
+### 2. Apply Theme
 
-### 2. 应用主题
-
-使用 `rednote-theme` 函数应用主题：
+Use `rewind-theme` function:
 
 ```typst
-#show: rednote-theme.with(
-  font-family: ("Source Han Serif SC", "Times New Roman"), // 自定义字体
-  // bg-color: rgb("#fff0f0"),  // 自定义背景色
+#show: rewind-theme.with(
+  font-family: ("Source Han Serif SC", "Times New Roman"), // Custom font
+  // bg-color: rgb("#fff0f0"),  // Custom background
 )
 ```
 
-### 3. 创建封面
+### 3. Create Cover
 
-使用 `cover` 函数创建吸引人的封面：
+Use `cover` function:
 
 ```typst
 #cover(
   image-content: image("assets/brand.png"),
-  title: [你的标题],
-  subtitle: [副标题],
-  author: "@你的名字",
+  title: [Your Title],
+  subtitle: [Subtitle],
+  author: "@YourName",
 )
 ```
 
-### 4. 编写内容
+### 4. Write Content
 
-接下来就可以像平时一样编写 Typst 内容了。模板会自动处理标题、段落和图片的样式。
+Write your content as usual.
 
 ```typst
-= 什么是 Typst？
+= What is Typst?
 
-Typst 是一款新兴的排版系统...
+Typst is a new typesetting system...
 ```
 
-## 示例
+## Example
 
-查看 `main.typ` 获取完整的示例代码。
+Check `template/main.typ` for a full example.
 
-## 许可证
+## License
 
 MIT
