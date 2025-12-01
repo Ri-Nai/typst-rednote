@@ -7,7 +7,7 @@ A Typst template for creating lifestyle social media style notes (similar to Xia
   <img src="assets/thumbnail-article.png" alt="Preview Article" width="45%" />
 </p>
 
-[English](./README.md) | [中文](./README_CN.md)
+[English](https://github.com/Ri-Nai/typst-rewind-note/blob/main/README.md) | [中文](https://github.com/Ri-Nai/typst-rewind-note/blob/main/README_CN.md)
 
 ## Introduction
 
